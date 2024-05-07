@@ -23,3 +23,12 @@ Kelas: Pemrograman Lanjut - A<br>
 Jika hanya satu dari kedua port tersebut yang diubah, misalnya port klien, maka akan terjadi kesalahan pada sisi klien. Klien akan menganggap bahwa port yang diubah tersebut tidak terhubung, dan program akan gagal ketika perintah `cargo run --bin client` dijalankan, seperti yang ditunjukkan dalam gambar di atas.
 ![](images/images5.png)  
 ![](images/images6.png)
+
+###### 2.3. Small changes. Add some information to client.
+* Tampilan yang terlihat dalam foto di atas berhasil dicapai dengan melakukan perubahan kode dalam bin/server.rs menjadi seperti berikut.
+![](images/images7.png)
+
+Perubahan dilakukan untuk memastikan bahwa ketika `bcast.tx` (yang bertindak sebagai *sender*) mengirimkan pesan kepada setiap klien, ia juga akan menyediakan alamat IP *sender* dari teks melalui variabel addr.
+![](images/images8.png)
+
+
